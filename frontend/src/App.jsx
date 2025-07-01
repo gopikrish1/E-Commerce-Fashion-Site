@@ -10,7 +10,7 @@ import Login from './pages/Login'
 import PlaceOrder from './pages/PlaceOrder'
 import Orders from './pages/Orders'
 import Navbar from './components/Navbar'
-import Footer from './components/fOOTER.JSX'
+import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
   import React from 'react';
 
