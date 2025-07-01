@@ -22,14 +22,13 @@ const Collection = () => {
   }
 
 
-  const toggleSubCategory=(e)=>{
-    if(subCategory.includes(e.target.value)){
-        setSubCategory(prev => prev.filter(item => item !== e.target.value))
-    }
-    else{
-        setSubCategory(prev => [...prev,e.target.value])
-    }
-  }
+const toggleSubCategory = (e) => {
+  const val = e.target.value.trim();
+  setSubCategory(prev => 
+    prev.includes(val) ? prev.filter(item => item !== val) : [...prev, val]
+  );
+};
+
 
     const applyFilter = () => {
 
@@ -72,7 +71,7 @@ const Collection = () => {
 
   useEffect(()=>{
     applyFilter();
-  },[category,subCategory,search,showSearch])
+  },[category,subCategory,search,showSearch,products])
 
 useEffect(() => {
   sortProduct();
