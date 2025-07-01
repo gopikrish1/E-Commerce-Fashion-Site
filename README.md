@@ -3,11 +3,11 @@
 A full-featured **MERN Stack** fashion e-commerce platform built with performance, scalability, and modern user experience in mind. The app includes a **responsive customer-facing storefront**, a **secure admin panel**, robust backend APIs, and **dual payment gateway integration** (Stripe & Razorpay).
 
 ✅ **Live Demo**
->👤 [User Site - Click Here](https://e-commerce-fashion-site-frontend.onrender.com)
+👤 [User Site - Click Here](https://e-commerce-fashion-site-frontend.onrender.com)
 > >🔐 **User Test Credentials:**
 > >Email: `test@gmail.com`
 > >Password: `Bugfree@7`
-> 🛠️ [Admin Panel - Click Her](https://e-commerce-fashion-site-admin.onrender.com)
+🛠️ [Admin Panel - Click Her](https://e-commerce-fashion-site-admin.onrender.com)
 
 ---
 
