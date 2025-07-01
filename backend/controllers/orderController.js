@@ -175,14 +175,14 @@ const verifyRazorpay = async (req, res) => {
     if (orderInfo.status === 'paid') {
       await orderModel.findByIdAndUpdate(orderInfo.receipt, { payment: true });
       await userModel.findByIdAndUpdate(userId, { cartData: {} });
-      res.json({ success: true, message: "" });
+      res.json({ success: true, message: "Payment Done" });
     } else {
-      res.json({ success: false, message: 'Sorry' });
+      res.json({ success: false, message: 'Payment Failed' });
     }
   } 
   catch (error) {
         console.log('Error:', error);
-        res.json({ success: false, message:'Sorry' });
+        res.json({ success: false, message:error });
   }
 };
 

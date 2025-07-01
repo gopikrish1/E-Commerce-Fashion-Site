@@ -9,7 +9,7 @@ const Footer = () => {
             <div>
                 <img src={assets.logo} className='mb-5 w-32' alt="" />
                 <p className="text-center text-xs text-gray-500 py-4">
-                    © 2025 Gopi Krish. All Rights Reserved. This eCommerce website is a student project built by Raj Verma for educational purposes.
+                    © 2025 Gopi Krish. All Rights Reserved. This eCommerce website is a student project built by Gopi Krishnaa for educational purposes.
                 </p>
             </div>
             <div>
@@ -24,7 +24,7 @@ const Footer = () => {
             <div>
                 <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
                 <ul className='flex flex-col gap-1 text-gray-600'>
-                    <li>+91 99***00776</li>
+                    <li>+91 9940300776</li>
                     <li>gopi22029.it@rmkec.ac.in</li>
 
                 </ul>
