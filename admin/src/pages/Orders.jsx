@@ -5,6 +5,18 @@ import Title from '../components/Title';
 import { assets } from '../assets/assets';
 import {toast} from 'react-toastify'
 
+const formatPaymentMethod = (method) => {
+  const key = method.toLowerCase();
+  switch (key) {
+    case 'cod': return 'COD(Cash on Delivery)';
+    case 'stripe': return 'Stripe';
+    case 'razorpay': return 'Razorpay'; // lowercase check
+    default: return method;
+  }
+}
+
+
+
 const Orders = ({ token }) => {
   const [orders, setOrders] = useState([]);
 
@@ -61,8 +73,9 @@ const Orders = ({ token }) => {
               key={index}
             >
               {/* Column 1: Icon */}
-              <img src={assets.parcel_icon} alt="parcel" />
-
+              <div className='flex items-center h-24 rounded-lg'>
+                <img src={assets.parcel_icon} alt="parcel" />
+              </div>
               {/* Column 2: Items */}
               <div>
                 {order.items.map((item, itemIndex) => (
@@ -79,7 +92,7 @@ const Orders = ({ token }) => {
               {/* Column 3: Details */}
               <div>
                 <p className='text-sm sm:text-[15px]'>Items: {order.items.length}</p>
-                <p className='mt-3'>Method: {order.paymentMethod}</p>
+                <p className='mt-3'>Method: {formatPaymentMethod(order.paymentMethod)}</p>
                 <p>Payment: {order.payment ? 'Done' : 'Pending'}</p>
                 <p>Date: {new Date(order.date).toLocaleDateString()}</p>
               </div>

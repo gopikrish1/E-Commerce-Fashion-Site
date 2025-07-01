@@ -137,7 +137,7 @@ const placeOrderRazorpay = async(req,res)=>{
             items, 
             address,
             amount,
-            paymentMethod:"RazorPay",
+            paymentMethod:"razorpay",
             payment:false,
             date : Date.now()
         }
@@ -161,21 +161,32 @@ const placeOrderRazorpay = async(req,res)=>{
         });
   } catch (error) {
         console.log('Server Error:', error);
-        resjson({ success: false, message: error.message });
+        res.json({ success: false, message: error.message });
   }
 }
 
 const verifyRazorpay = async (req, res) => {
   try {
+
+    console.log('verifyRazorpay payload:', req.body);
+
     const {razorpay_order_id } = req.body;
     const userId = req.userId;
 
     const orderInfo = await razorpayInstance.orders.fetch(razorpay_order_id);
 
+    const existingOrder = await orderModel.findById(orderInfo.receipt);
+    
+
     if (orderInfo.status === 'paid') {
-      await orderModel.findByIdAndUpdate(orderInfo.receipt, { payment: true });
-      await userModel.findByIdAndUpdate(userId, { cartData: {} });
+      await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
+      await orderModel.findByIdAndUpdate(
+          orderInfo.receipt,
+          { payment: true, paymentMethod: 'razorpay' } // update document here
+      );
+       
       res.json({ success: true, message: "Payment Done" });
+
     } else {
       res.json({ success: false, message: 'Payment Failed' });
     }
