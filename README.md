@@ -12,8 +12,6 @@ A full-featured **MERN Stack** fashion e-commerce platform built with performanc
 > • Email: `test@gmail.com`  
 > • Password: `Bugfree@7`
 
----
-
 ### 🛠️ Admin Panel  
 🔗 [Click Here to Explore](https://e-commerce-fashion-site-admin.onrender.com)
 
