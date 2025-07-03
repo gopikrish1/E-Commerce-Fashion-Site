@@ -5,18 +5,21 @@ A full-featured **MERN Stack** fashion e-commerce platform built with performanc
 
 ## ✅ Live Demo
 
+🎥 [Watch Demo Video](https://drive.google.com/file/d/1MOPUhKhlIYb-GHMfTq19jauQU_lrRnNj/view?usp=sharing)
 ### 👤 User Site  
-🔗 [Click Here to Explore](https://e-commerce-fashion-site-frontend.onrender.com)
+🔗 [Explore User Site](https://e-commerce-fashion-site-frontend.onrender.com)  
 
 > 🔐 **Test User Credentials**  
-> • Email: `test@gmail.com`  
-> • Password: `Bugfree@7`
+> • **Email:** `test@gmail.com`  
+> • **Password:** `Bugfree@7`
+
+---
 
 ### 🛠️ Admin Panel  
-🔗 [Click Here to Explore](https://e-commerce-fashion-site-admin.onrender.com)
+🔗 [Explore Admin Panel](https://e-commerce-fashion-site-admin.onrender.com)
 
 > ⚠️ **Note:** Admin credentials are available upon request.  
-> Contact me via [LinkedIn](https://www.linkedin.com/in/gopikrish01) or [Email](mailto:gopi22029.it@rmkec.ac.in).
+> 📩 Contact me via [LinkedIn](https://www.linkedin.com/in/gopikrish01) or [Email](mailto:gopi22029.it@rmkec.ac.in)
 
 
 ---
